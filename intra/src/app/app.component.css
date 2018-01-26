@@ -1,0 +1,9 @@
+.ficha{
+    text-align: center;
+    height: 150px;
+    padding: 10px 0px;
+    margin: 30px 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}

@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-md-12"> <h4>Objetivos</h4></div>
+    <div class="row">
+        <div class="col-md-5">
+            <button class="btn btn-light" (click)="cambiarAno(-1)"><</button>
+            {{ year }} 
+            <button class="btn btn-light " (click)="cambiarAno(1)">></button>
+            <a href="{{drive}}" target="_blank">
+              <img class="pull-rigth" style="width : 20px" src="https://cdn3.iconfinder.com/data/icons/document-icons-2/30/647702-excel-512.png" alt="">
+            </a>
+        </div>
+          <div class="col-md-7">
+              <button class="btn btn-light" (click)="cambiarTrimestre(-1)"><</button>
+            {{ trimestres[trimestreActual - 1] }} 
+            <button class="btn btn-light" (click)="cambiarTrimestre(1)">></button>
+          </div>
+    </div>
+    
+      <div class="col-md-12">
+        <!-- <a [href]="objetive.docURL" onclick="window.open(this.href);return false;"> -->
+          <form [formGroup]="form">
+          <div class="table-responsive text-center">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="text-center">{{ meses[trimestreInicio - 1] }}</th>
+                  <th class="text-center">{{ meses[(trimestreInicio)] }}</th>
+                  <th class="text-center">{{ meses[(trimestreInicio + 1)] }}</th>
+                  <th class="text-center">Promedio</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                  <td class="text-center"> {{ trimestre.mes1 }} </td>
+                  <td class="text-center"> {{ trimestre.mes2 }} </td>
+                  <td class="text-center"> {{ trimestre.mes3 }} </td>
+                  <td class="text-center"> {{total  | number : '1.2-2'}} </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </form>
+        <!-- </a> -->
+      </div>
+  </div>
